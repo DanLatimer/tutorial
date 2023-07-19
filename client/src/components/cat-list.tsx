@@ -13,8 +13,13 @@ export function CatList() {
             .then(cats => {console.log(cats); setCats(cats)})
             .catch(error => console.error(error.message));
     }, [])
-
-    return <ul>
-        {cats.map(cat => <li key={cat}>{cat}</li>)}
-    </ul>
+    const LiList = []
+for (const element of cats) {
+    console.log(element);
+    LiList.push(<li>{element}</li>);
+}
+return <ul>{LiList}</ul>
+    // return <ul>
+    //     {cats.map(cat => <li key={cat}>{cat}</li>)}
+    // </ul>
 }
