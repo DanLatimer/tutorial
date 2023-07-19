@@ -1,9 +1,9 @@
 import { Controller, Get, HttpException, HttpStatus, UseGuards } from '@nestjs/common';
 import { AuthGuard } from 'src/auth/auth.guard';
 
-@Controller('cat-controller')
+@Controller('cat')
 export class CatControllerController {
-    @UseGuards(AuthGuard)
+    // @UseGuards(AuthGuard)
     @Get()
     public findAll() {
         // throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
